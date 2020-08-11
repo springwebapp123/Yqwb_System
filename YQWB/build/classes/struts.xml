@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+	<package name="personManage" namespace="/" extends="struts-default">
+		 <action name="login" class="com.hxm.action.UserAction">
+            <result name="error" >/index.jsp</result>
+            <result name="success" type="redirect" >/main.jsp</result>
+        </action>
+        <action name="department" class="com.hxm.action.DepartmentAction"></action>
+        <action name="employee" class="com.hxm.action.EmployeeAction"></action>  
+        <action name="jhaction" class="com.hxm.action.JHAction"></action> 
+        <action name="xfdjaction" class="com.hxm.action.XFDJAction"></action>
+	</package>     
+</struts>
